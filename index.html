@@ -9,16 +9,17 @@
     <script>
         var socket = io();
 
-        sockt.on('usercnt', function (msg) {
+        socket.on('usercnt', function (msg) {
+            console.log(msg)
             document.getElementById('count').innerHTML = msg;
         })
 
-        socket.on('sndmsg', function(msg){
-            document.getElementById('messages').innerHTML+=msg+"<br>";
+        socket.on('sendmsg', function (msg) {
+            document.getElementById('messages').innerHTML += msg + "<br>";
         })
 
 
-        function sendmsg(){
+        function sendmsg() {
             socket.emit('sendmsg', document.getElementById('message').value);
         }
     </script>
@@ -31,7 +32,7 @@
     <br>
     <input type='text' id='message'>
     <button onclick='sendmsg()'>Send Message</button>
-    <div id="message">
+    <div id="messages">
 
     </div>
 </body>

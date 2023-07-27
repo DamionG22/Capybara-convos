@@ -8,7 +8,7 @@ io.on('connection', function (socket) {
     console.log('a user has joined');
     count++;
     io.emit('usercnt', count);
-    socket.on('disconnect', function (socket) {
+    socket.on('disconnect', function () {
         console.log('a user has disconnected');
         count--;
         io.emit('usercnt', count);
@@ -18,12 +18,9 @@ io.on('connection', function (socket) {
     })
 })
 
-
-
 app.get('/', function (req, res) {
     res.sendFile(__dirname + '/index.html');
 })
-
 
 http.listen(3001, function () {
     console.log('listening on 3001');
