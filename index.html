@@ -8,17 +8,13 @@
     <script src="/socket.io/socket.io.js"></script>
     <script>
         var socket = io();
-
         socket.on('usercnt', function (msg) {
             console.log(msg)
             document.getElementById('count').innerHTML = msg;
         })
-
         socket.on('sendmsg', function (msg) {
             document.getElementById('messages').innerHTML += msg + "<br>";
         })
-
-
         function sendmsg() {
             socket.emit('sendmsg', document.getElementById('message').value);
         }
