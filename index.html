@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capybara Convos</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io();
+
+        sockt.on('usercnt', function (msg) {
+            document.getElementById('count').innerHTML = msg;
+        })
+
+        socket.on('sndmsg', function(msg){
+            document.getElementById('messages').innerHTML+=msg+"<br>";
+        })
+
+
+        function sendmsg(){
+            socket.emit('sendmsg', document.getElementById('message').value);
+        }
+    </script>
+</head>
+
+<body>
+    Hello Capybaras
+    <br>
+    <span id="count">0</span> Capybara's Online
+    <br>
+    <input type='text' id='message'>
+    <button onclick='sendmsg()'>Send Message</button>
+    <div id="message">
+
+    </div>
+</body>
+
+</html>
