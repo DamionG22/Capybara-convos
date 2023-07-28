@@ -1,8 +1,10 @@
-const seedTopics = require("./topics-seed");
-const seedUsers = require("./user-seed");
-
-
 const sequelize = require("../config/connection");
+const {User, Topics } = require("../models")
+const topicData = require("./topicData.json");
+const userData = require("./userData.json");
+
+
+
 
 
 const seedAll = async () => {
