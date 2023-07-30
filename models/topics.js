@@ -14,6 +14,7 @@ Topics.init(
 
     
         name: {
+            
             type: DataTypes.STRING,
             allowNull: false,
         },
