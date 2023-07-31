@@ -1,7 +1,18 @@
 [
     {
-        "name": ""
+        "name": "Ferrule",
+        "description":"Have you ever been writing an expose on tacos and looked at your pencil and thought what is that metal thingy on the end? If you're like 1 in 3 internet people then this is the place for you. "
+    },
 
+    {
+        "name":"Birria",
+        "description":"Have you ever been on social media scrolling mindlessly and wondered what are those tacos these kids are dipping in a cup of juice?" 
+
+    },
+
+    {
+        "name":"NBA",
+        "description":"Your one stop spot for anything NBA related, talk about scores, rumors, or if Lebron has enough help"
 
 
     }

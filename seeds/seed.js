@@ -7,18 +7,20 @@ const userData = require("./userData.json");
 
 
 
-const seedAll = async () => {
+const seedDatabase = async () => {
     await sequelize.sync({ force: true });
-    console.log("\n----- DATABASE SYNCED -----\n");
-    
-    await seedTopics();
-    console.log("\n----- TOPICS  SEEDED -----\n");
+  
+    await User.bulkCreate(userData, {
+      individualHooks: true,
+      returning: true,
+    });
 
-    await seedUsers();
-    console.log("\n----- USERS SEEDED -----\n");
+    await Topics.bulkCreate(topicData, {
+        individualHooks: true,
+        returning: true,
+      });
+  
+    process.exit(0);
+  };
 
-process.exit(0);
-
-};
-
-seedAll();
+seedDatabase();
