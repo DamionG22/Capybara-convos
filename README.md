@@ -1,2 +1,2 @@
 # project-2
-Server application 
+Server application

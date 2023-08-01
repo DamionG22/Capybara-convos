@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS capybara_convo_db ;
-CREATE DATABASE capybara_convo_db ;
+DROP DATABASE IF EXISTS  ;
+CREATE DATABASE  ;
