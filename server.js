@@ -1,11 +1,28 @@
 var express = require('express');
 const exphbs = require('express-handlebars');
+const session = require('express-session');
 const hbs = exphbs.create({});
 const path = require('path');
 
 var app = express();
 const PORT = process.env.PORT || 3001;
 
+//All sessions info
+const sequelize = require('./config/connection');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
+
+const sess = {
+    secret: 'Super secret secret',
+    cookie: {},
+    resave: false,
+    saveUninitialized: true,
+    store: new SequelizeStore({
+      db: sequelize
+    })
+  };
+
+
+//All the socket.io info
 var socket = require('./socket');
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
