@@ -15,6 +15,9 @@ async function getOnlineUsersCount(baseUrl) {
       }
     }
 
+    $("#currentHour").text(dayjs().format("HH:mm:ss a"))
+    $("#currentDay").text(dayjs().format("MMM DD, YYYY"))
+    
 router.use('/users', userRoutes);
 
 module.exports = router;
