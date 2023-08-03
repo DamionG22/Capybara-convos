@@ -17,5 +17,27 @@
   "username": "EggNoodlesW/Ketchup",
   "email": "henryHill@rocketmail.com",
   "password": "Goodfella90"
+},
+{
+  "name": "Sonic",
+ "username": "SonicBoom13",
+ "email": "shadowDidIt@segamail.com",
+ "password": "Knuckles1738"
+},
+{
+  "name": "Donald",
+  "username": "GoneQuackers47",
+  "email": "ddQuack47@gmail.com",
+  "password":"RuffledFeathers47"
+
+
+},
+{
+  "name": "Kenny",
+  "username": "OrangeHoodyPulled8",
+  "email": "GoinDownSouth@park.com",
+  "password": "WhereWereYou?"
+
 }
+
 ]

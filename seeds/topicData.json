@@ -11,6 +11,24 @@
 
     {
         "name":"NBA",
-        "description":"Your one stop spot for anything NBA related, talk about scores, rumors, or if Lebron has enough help"
+        "description":"Your one stop spot for anything NBA related, talk about scores, rumors, or if Lebron has enough help."
+    },
+
+    {
+        "name": "Reality TV",
+        "description": "If you like watching people with no real skills or careers, go to dinner parties and fundraisers , then this is your place."
+    },
+
+    {
+        "name": "Karens-R-US",
+        "description": "A place to complain and vent about everyday issues that arent really worth making a scene over , but you cant help yourself."
+    },
+    {
+        "name": "Sewer Turtles",
+        "description": "A place to talk about mutated turtles abandon in the NYC sewers with only unwanted greasy old pizza to eat."
+    },
+    {
+        "name":"Cars That Go Boom",
+        "description":"If you like the  cars, the cars that go BOOM then this is the place for you!"
     }
 ]
