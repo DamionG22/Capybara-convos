@@ -38,8 +38,26 @@
       </header>
     </div>
 
+{{!-- <h2>Login</h2>
+
+<form class="form login-form">
+  <div class="form-group">
+    <label for="email-login">email:</label>
+    <input class="form-input" type="text" id="email-login" />
+  </div>
+  <div class="form-group">
+    <label for="password-login">password:</label>
+    <input class="form-input" type="password" id="password-login" />
+  </div>
+  <div class="form-group">
+    <button class="btn btn-primary" type="submit">login</button>
+  </div>
+</form>
+
+<script src="/js/login.js"></script> --}}
+
+
     <section class="chatbox">
-      {{!-- {{#if logged_IN}} --}}
       <h4>🗣️💬</h4>
       <span id="count">0</span> capybaras online
       <div class="messagebox">
@@ -49,16 +67,15 @@
       </div>
       <input class="socketinput" type='text' id='message'>
       <button class="socketbutton" onclick='sendmsg()'>Send Message</button>
-      {{!-- {{/if}} --}}
     </section>
 
     <content class="container container-fluid mt-5">
       {{{ body }}}
     </content>
 
-    <footer>
+    {{!-- <footer>
 
-    </footer>
+    </footer> --}}
 
   </main>
 
