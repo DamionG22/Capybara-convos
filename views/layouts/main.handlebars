@@ -5,41 +5,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>THE BEST FORUM ON EARTH!!!</title>
-  
+
   <script src="/socket.io/socket.io.js"></script>
-  <link rel="stylesheet" href="../../public/css/style.css">
+  <link rel="stylesheet" href="/css/jass.css">
+  <link rel="stylesheet" href="/css/style.css">
   <script>
-        var socket = io();
-        socket.on('usercnt', function (msg) {
-            console.log(msg)
-            document.getElementById('count').innerHTML = msg;
-        })
-        socket.on('sendmsg', function (msg) {
-            document.getElementById('messages').innerHTML += msg + "<br>";
-        })
-        function sendmsg() {
-            socket.emit('sendmsg', document.getElementById('message').value);
-        }
-    </script>
+    var socket = io();
+    socket.on('usercnt', function (msg) {
+      console.log(msg)
+      document.getElementById('count').innerHTML = msg;
+    })
+    socket.on('sendmsg', function (msg) {
+      document.getElementById('messages').innerHTML += msg + "<br>";
+    })
+    function sendmsg() {
+      socket.emit('sendmsg', document.getElementById('message').value);
+    }
+  </script>
 </head>
 
 <body>
-  <header class="display-flex justify-space-between align-center p-2">
-    <button> Home </button>
-    <button> Register </button>
-    <button> Threads </button>
-  </header>
+  <main class="content">
+    <div class="navbar">
+      <header class="display-flex justify-space-between align-center p-2">
+        {{!-- {{#if logged_in}} --}}
+        <a class="coolbutton" href="/"> Home</a>
+        <a class="coolbutton" href="/topics"> Topics</a>
+        <button class="coolbutton" id="logout">Logout</button>
+        {{!-- {{/if}} --}}
+      </header>
+      <header class="display-flex justify-space-between align-center p-2">
+      </header>
+    </div>
 
-  <sidebar>
+    <section class="chatbox">
+      {{#if logged_IN}}
+      <p>Hello Capybaras</p>
+      <br>
+      <span id="count">0</span> Capybara's Online
+      <br>
+      <input type='text' id='message'>
+      <button onclick='sendmsg()'>Send Message</button>
+      <div id="messages">
+        {{/if}}
+      </div>
+    </section>
 
-  </sidebar>
+    <content class="container container-fluid mt-5">
+      {{{ body }}}
+    </content>
 
-  <main class="container container-fluid mt-5">
-    {{{ body }}}
+    <footer>
+
+    </footer>
+
   </main>
-  <footer>
-      
-  </footer>
+
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 </body>
 
 </html>
