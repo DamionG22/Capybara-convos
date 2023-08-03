@@ -1,6 +1,10 @@
 const router = require('express').Router();
 const userRoutes = require('./user-routes');
+<<<<<<< HEAD
 // const axios = require('axios');
+=======
+const axios = require('axios');
+>>>>>>> dfeec45930f17dd30cf4adf1ddeea95dc091f8a5
 
 // async function getOnlineUsersCount(baseUrl) {
 //     const apiEndpoint = '/api/core/v3/users/online/count';

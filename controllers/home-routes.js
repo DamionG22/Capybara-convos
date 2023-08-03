@@ -1,6 +1,9 @@
 const router = require('express').Router();
 const { User } = require('../models');
+<<<<<<< HEAD
 const { Topics } = require('../models');
+=======
+>>>>>>> dfeec45930f17dd30cf4adf1ddeea95dc091f8a5
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
@@ -45,7 +48,6 @@ router.get('/login', (req, res) => {
     res.redirect('/');
     return;
   }
-
   res.render('login');
 });
 
