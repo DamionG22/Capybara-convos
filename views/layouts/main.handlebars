@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE BEST FORUM ON EARTH!!!</title>
+  
+  <script src="/socket.io/socket.io.js"></script>
+  <link rel="stylesheet" href="../../public/css/style.css">
+  <script>
+        var socket = io();
+        socket.on('usercnt', function (msg) {
+            console.log(msg)
+            document.getElementById('count').innerHTML = msg;
+        })
+        socket.on('sendmsg', function (msg) {
+            document.getElementById('messages').innerHTML += msg + "<br>";
+        })
+        function sendmsg() {
+            socket.emit('sendmsg', document.getElementById('message').value);
+        }
+    </script>
+</head>
+
+<body>
+  <header class="display-flex justify-space-between align-center p-2">
+    <button> Home </button>
+    <button> Register </button>
+    <button> Threads </button>
+  </header>
+
+  <sidebar>
+
+  </sidebar>
+
+  <main class="container container-fluid mt-5">
+    {{{ body }}}
+  </main>
+  <footer>
+      
+  </footer>
+</body>
+
+</html>
