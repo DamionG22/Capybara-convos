@@ -1,6 +1,20 @@
+body {
+    background-color: #eeeeee;
+}
+
+.navbar {
+    margin: 15px;
+}
+
+.topicheader {
+    background-color: #FFF8EA;
+}
+
 .chatbox {
     display: inline-block;
-    width: 200px
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
 }
 
 .content {
@@ -10,5 +24,38 @@
 }
 
 .coolbutton {
-    background-color: aqua;
+    color: #000000;
+    background-color: #7FAFFF;
+    padding: 10px;
+    border: 0px;
+    border-radius: 5px;
+}
+
+.socketbutton {
+    color: #000000;
+    background-color: #ffdc96;
+    padding: 5px;
+    border: 0px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.socketinput {
+    border: 1px solid #7FAFFF;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.messagebox {
+    border: 1px dotted #7FAFFF;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }

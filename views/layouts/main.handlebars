@@ -29,8 +29,8 @@
     <div class="navbar">
       <header class="display-flex justify-space-between align-center p-2">
         {{!-- {{#if logged_in}} --}}
+        <h1>Capybara Convos</h1>
         <a class="coolbutton" href="/"> Home</a>
-        <a class="coolbutton" href="/topics"> Topics</a>
         <button class="coolbutton" id="logout">Logout</button>
         {{!-- {{/if}} --}}
       </header>
@@ -39,16 +39,17 @@
     </div>
 
     <section class="chatbox">
-      {{#if logged_IN}}
-      <p>Hello Capybaras</p>
-      <br>
-      <span id="count">0</span> Capybara's Online
-      <br>
-      <input type='text' id='message'>
-      <button onclick='sendmsg()'>Send Message</button>
-      <div id="messages">
-        {{/if}}
+      {{!-- {{#if logged_IN}} --}}
+      <h4>🗣️💬</h4>
+      <span id="count">0</span> capybaras online
+      <div class="messagebox">
+        ...
+        <div id="messages">
+        </div>
       </div>
+      <input class="socketinput" type='text' id='message'>
+      <button class="socketbutton" onclick='sendmsg()'>Send Message</button>
+      {{!-- {{/if}} --}}
     </section>
 
     <content class="container container-fluid mt-5">
