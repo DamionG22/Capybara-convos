@@ -1,7 +1,9 @@
 var express = require('express');
 const exphbs = require('express-handlebars');
 const session = require('express-session');
+const routes = require('./controllers');
 const hbs = exphbs.create({});
+
 const path = require('path');
 const dotenv = require('dotenv');
 dotenv.config();
@@ -43,6 +45,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
     res.render('homepage');
 })
+
+app.use(routes);
 
 http.listen(PORT, () => {
     console.log('listening on 3001');

@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User } = require('../models');
+const { Topics } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
@@ -11,9 +12,27 @@ router.get('/', withAuth, async (req, res) => {
 
     const users = userData.map((project) => project.get({ plain: true }));
     
-    // homepage.handlebar....
+    // users rendered onto homepage 
     res.render('homepage', {
       users,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/', withAuth, async (req, res) => {
+  try {
+    const topicData = await Topics.findAll({
+      order: [['name', 'ASC']],
+    });
+
+    const topic = topicData.map((project) => project.get({ plain: true }));
+    
+    // topics rendered onto homepage
+    res.render('homepage', {
+      topic,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
