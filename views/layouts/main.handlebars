@@ -26,15 +26,17 @@
 
 <body>
   <main class="content">
-    <header class="display-flex justify-space-between align-center p-2">
-      <button class="coolbutton"> Home </button>
-      <button> Register </button>
-      <button> Threads </button>
-    </header>
-
-    {{#if logged_OUT}}
-      
-    {{/if}}
+    <div class="navbar">
+      <header class="display-flex justify-space-between align-center p-2">
+        {{!-- {{#if logged_in}} --}}
+        <a class="coolbutton" href="/"> Home</a>
+        <a class="coolbutton" href="/topics"> Topics</a>
+        <button class="coolbutton" id="logout">Logout</button>
+        {{!-- {{/if}} --}}
+      </header>
+      <header class="display-flex justify-space-between align-center p-2">
+      </header>
+    </div>
 
     <section class="chatbox">
       {{#if logged_IN}}
@@ -45,11 +47,9 @@
       <input type='text' id='message'>
       <button onclick='sendmsg()'>Send Message</button>
       <div id="messages">
-      {{/if}}
+        {{/if}}
       </div>
     </section>
-
-
 
     <content class="container container-fluid mt-5">
       {{{ body }}}
@@ -61,6 +61,9 @@
 
   </main>
 
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 </body>
 
 </html>
