@@ -1,6 +1,3 @@
- 
-
-
 # **Capybara-convos**  
 ### Created by:  
 ### Lexin, Kevin, Jacob, Niko, Damion  
@@ -36,23 +33,18 @@ To contribute please make a pull request for review
 There are no tests for this project.  
 
 
-## **License:**  
+## **License:**
+N/A
 
 ## References
-https://handlebarsjs.com/guide/builtin-helpers.html#if
-https://handlebarsjs.com/guide/partials.html
-https://expressjs.com/en/resources/middleware/cookie-session.html
-https://www.w3schools.com/js/js_cookies.asp
-https://www.youtube.com/watch?v=erfN7fH7A6s&list=PLurIMwd6GdCi3ssXNAcjZ2l5mYaTfYPhf&index=4
- 
+* https://handlebarsjs.com/guide/builtin-helpers.html#if
+* https://handlebarsjs.com/guide/partials.html
+* https://expressjs.com/en/resources/middleware/cookie-session.html
+* https://www.w3schools.com/js/js_cookies.asp
+* https://www.youtube.com/watch?v=erfN7fH7A6s&list=PLurIMwd6GdCi3ssXNAcjZ2l5mYaTfYPhf&index=4
 
-
-
-
-To add a screenshot, create an assets/images folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-   
-![alt text](assets/images/screenshot.png)
+## The deployed application should look like the following   
+![Site titled Capybara Convos with navigational buttons up top and an index of topics below.]([assets/images/screenshot.png](https://cdn.discordapp.com/attachments/851070061606731779/1136853248335155220/image.png))
 
 
 
