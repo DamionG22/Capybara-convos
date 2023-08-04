@@ -11,8 +11,8 @@ dotenv.config();
 var app = express();
 const PORT = process.env.PORT || 3001;
 
-const dbURL = process.env.capybara_convo_db;
-console.log('Database URL:', dbURL);
+// const dbURL = process.env.capybara_convo_db;
+// console.log('Database URL:', dbURL);
 
 //All sessions info
 const sequelize = require('./config/connection');
