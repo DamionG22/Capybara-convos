@@ -19,14 +19,14 @@ const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const sess = {
-    secret: 'Super secret secret',
-    cookie: {},
-    resave: false,
-    saveUninitialized: true,
-    store: new SequelizeStore({
-      db: sequelize
-    })
-  };
+  secret: 'Super secret secret',
+  cookie: {},
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize
+  })
+};
 
 
 //All the socket.io info
@@ -47,7 +47,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 // })
 
 app.use(routes);
-
-http.listen(PORT, () => {
+sequelize.sync({
+  force: true
+}).then(() => {
+  http.listen(PORT, () => {
     console.log('listening on 3001');
+  })
+
 })
